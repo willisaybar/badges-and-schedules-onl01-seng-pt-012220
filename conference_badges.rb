@@ -12,13 +12,13 @@ end
 
 def assign_rooms(attendee)
     
-    (attendee).map {|index| room}
+    attendee.each_with_index {|index| room}
     puts "Hello, #{attendee}, You'll be assigned to room #{index}!"
 end
 
-def printer(attendees)
-  printer_list = batch_badge_creator(attendees).concat assign_rooms(attendees)
-  printer_list.each do |line|
-    puts line
-  end
-end
+# def printer(attendees)
+#   printer_list = batch_badge_creator(attendees).concat assign_rooms(attendees)
+#   printer_list.each do |line|
+#     puts line
+#   end
+# end
